@@ -62,9 +62,16 @@ export default function MainLayout({ children }) {
           <p className="text-sm text-gray-500 mb-4">
             Log in to follow creators, like videos, and view comments.
           </p>
-          <button className="w-full py-2 px-4 border rounded-md font-medium mb-2 ">
-            Login
-          </button>
+          <Link href="/login">
+            <button className="w-full py-2 px-4 border rounded-md font-medium mb-2 hover:bg-gray-50">
+              Login
+            </button>
+          </Link>
+          <Link href="/signup">
+            <button className="w-full py-2 px-4 border bg-red-500 text-white rounded-md font-medium mb-2 hover:bg-gray-50">
+              Signup
+            </button>
+          </Link>
         </div>
 
         <div className="border-t px-3 py-4 text-xs text-gray-500">
@@ -93,10 +100,12 @@ export default function MainLayout({ children }) {
                   <FaPlus className="mr-2" /> Upload
                 </button>
               </Link>
+              <Link href="/login">
+                <button className="bg-red-500 text-white px-6 py-1 rounded-md hover:bg-red-600">
+                  Log in
+                </button>
+              </Link>
               
-              <button className="bg-red-500 text-white px-6 py-1 rounded-md ">
-                Log in
-              </button>
             </div>
             <div>
               <Link href="/profile" className="flex items-center p-3 hover:bg-gray-100 rounded-md mx-2">
